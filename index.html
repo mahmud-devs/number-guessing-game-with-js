@@ -7,18 +7,29 @@
         <link rel="stylesheet" href="css/script.css" />
     </head>
     <body class="body">
-        <div class="playerOne">
-            <h1 class="player">Player one start</h1>
-            <h2 class="number">Pick a number</h2>
-            <input class="startInput" type="password" />
-            <button class="startBtn">Start</button>
+        <h2 class="allChance">you </h2>
+        <div class="boxOne">
+            <div class="playerOne">
+                <h1 class="playerOne__player player">Player one start</h1>
+                <h2 class="playerOne__number number">Pick a number</h2>
+                <p class="oneErr"></p>
+                <input class="startInput" type="text" />
+                <button class="startBtn">Start</button>
+            </div>
         </div>
-        <div class="playerOne">
-            <h1 class="player">Player two start</h1>
-            <h2 class="number">guess the number</h2>
-            <input class="startInput" type="password" />
-            <button class="startBtn">Start</button>
+        
+        
+        <div class="boxTwo">
+            <div class="playerTwo">
+                <h1 class="playerTwo__player player">Player two start</h1>
+                <h2 class="playerTwo__number number">guess the number</h2>
+                <p class="twoErr"></p>
+                <input class="guessInput" type="text" />
+                <button class="guessBtn">Start</button>
+            </div>
         </div>
+        <button class="restart">restart</button>
+
 
         <script src="js/main.js"></script>
     </body>

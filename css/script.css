@@ -6,27 +6,35 @@
 
 .body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
     background: linear-gradient(to left, hsl(101, 99%, 61%), rgb(194, 48, 227));
-    column-gap: 20px;
+    row-gap: 20px;
 }
-.playerOne {
+.playerOne,
+.playerTwo {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
     text-align: center;
 }
-.startInput {
+.startInput,
+.guessInput {
     padding: 10px 20px;
 }
 .startInput:focus {
     outline: none;
 }
-.startBtn {
-    padding: 7px 0;
+.guessInput:focus {
+    outline: none;
+}
+.startBtn,
+.guessBtn,.restart {
+    padding: 7px 10px;
+    text-transform: capitalize;
     background-color: black;
     color: white;
     font-size: 20px;
@@ -34,6 +42,14 @@
     letter-spacing: 2px;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.restart{
+    display: none;
 }
 .player {
     text-transform: uppercase;
@@ -46,3 +62,26 @@
     font-size: 30px;
     color: #fff;
 }
+.oneErr,.twoErr {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(255, 0, 0);
+    font-weight: 600;
+}
+.allChance{
+    font-size: 70px;
+    color: blue;
+    text-transform: capitalize;
+}
+
+.boxOne{
+    display: block;
+}
+.boxTwo{
+    display: none;
+}
+
+
+
+
+
