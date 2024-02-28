@@ -65,8 +65,7 @@ startBtn.addEventListener("click", () => {
     boxTwo.style.display = "block";
     boxOne.style.display = "none";
     imgBox.style.display = "flex";
-    
-
+    img.setAttribute("src", "images/1.png");
 });
 
 // one keydown eventlistner
@@ -106,7 +105,6 @@ guessBtn.addEventListener("click", () => {
         img.style.width = "200px";
         restart.style.display = "block";
         img.setAttribute("src", "images/win.png");
-        
     } else {
         chance--;
         if (chance == 4) {
@@ -114,13 +112,10 @@ guessBtn.addEventListener("click", () => {
         } else if (chance == 3) {
             img.setAttribute("src", "images/3.png");
         } else if (chance == 2) {
-            img.style.width = "200px";
             img.setAttribute("src", "images/4.png");
-            
         } else if (chance == 1) {
             img.style.width = "120px";
             img.setAttribute("src", "images/5.png");
-            
         }
         if (chance <= 0) {
             allChance.innerHTML = `Game over`;
@@ -128,7 +123,6 @@ guessBtn.addEventListener("click", () => {
             restart.style.display = "block";
             img.style.width = "200px";
             img.setAttribute("src", "images/lose.png");
-            
         } else {
             allChance.innerHTML = `you have ${chance} chances`;
         }
