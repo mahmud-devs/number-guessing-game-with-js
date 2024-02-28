@@ -80,8 +80,17 @@
 .boxTwo{
     display: none;
 }
-
-
-
+.imgBox{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+    align-items: center;
+}
+.img{
+    width: 120px;
+}
+.imgBox{
+    display: none;
+}
 
 
