@@ -23,6 +23,12 @@ const guessBtn = document.querySelector(".guessBtn");
 const twoErr = document.querySelector(".twoErr");
 
 /*
+================ player input default value   =================
+*/
+guessInput.value = "";
+startInput.value = "";
+
+/*
 ================ player box selector    =================
 */
 
@@ -96,10 +102,18 @@ guessBtn.addEventListener("click", () => {
         chance--;
         if (chance <= 0) {
             allChance.innerHTML = `Game over`;
+            boxTwo.style.display = "none";
+            restart.style.display = "block";
         } else {
             allChance.innerHTML = `you have ${chance} chances`;
         }
 
         console.log("kisu nai");
     }
+});
+
+// restart button event listner
+
+restart.addEventListener("click", () => {
+    location.reload();
 });
