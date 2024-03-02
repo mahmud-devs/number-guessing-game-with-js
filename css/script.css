@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap");
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +15,7 @@
     height: 100vh;
     background: linear-gradient(to left, hsl(101, 99%, 61%), rgb(194, 48, 227));
     row-gap: 20px;
+    font-family: "Open Sans", sans-serif;
 }
 .playerOne,
 .playerTwo {
@@ -32,7 +35,8 @@
     outline: none;
 }
 .startBtn,
-.guessBtn,.restart {
+.guessBtn,
+.restart {
     padding: 7px 10px;
     text-transform: capitalize;
     background-color: black;
@@ -48,7 +52,7 @@
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
 }
-.restart{
+.restart {
     display: none;
 }
 .player {
@@ -62,35 +66,34 @@
     font-size: 30px;
     color: #fff;
 }
-.oneErr,.twoErr {
+.oneErr,
+.twoErr {
     font-size: 20px;
     text-transform: uppercase;
     color: rgb(255, 0, 0);
     font-weight: 600;
 }
-.allChance{
+.allChance {
     font-size: 70px;
     color: blue;
     text-transform: capitalize;
 }
 
-.boxOne{
+.boxOne {
     display: block;
 }
-.boxTwo{
+.boxTwo {
     display: none;
 }
-.imgBox{
+.imgBox {
     display: flex;
     flex-direction: column;
     row-gap: 0px;
     align-items: center;
 }
-.img{
+.img {
     width: 120px;
 }
-.imgBox{
+.imgBox {
     display: none;
 }
-
-
