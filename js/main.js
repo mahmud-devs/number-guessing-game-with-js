@@ -89,3 +89,50 @@ guessInput.addEventListener("keydown", (e) => {
 /*
 ================ player one eventlistner     =================
 */
+guessBtn.addEventListener("click", () => {
+    if (isNaN(guessInput.value)) {
+        twoErr.innerHTML = "please insert a number";
+        return;
+    } else if (guessInput.value.length > 4) {
+        twoErr.innerHTML = "please insert a 4 digit number";
+        return;
+    }
+
+    let playerTwoValue = guessInput.value;
+    if (playerOneValue == playerTwoValue) {
+        allChance.innerHTML = `you win`;
+        boxTwo.style.display = "none";
+        img.style.width = "200px";
+        restart.style.display = "block";
+        img.setAttribute("src", "images/win.png");
+    } else {
+        chance--;
+        if (chance == 4) {
+            img.setAttribute("src", "images/2.png");
+        } else if (chance == 3) {
+            img.setAttribute("src", "images/3.png");
+        } else if (chance == 2) {
+            img.setAttribute("src", "images/4.png");
+        } else if (chance == 1) {
+            img.style.width = "120px";
+            img.setAttribute("src", "images/5.png");
+        }
+        if (chance <= 0) {
+            allChance.innerHTML = `Game over`;
+            boxTwo.style.display = "none";
+            restart.style.display = "block";
+            img.style.width = "200px";
+            img.setAttribute("src", "images/lose.png");
+        } else {
+            allChance.innerHTML = `you have ${chance} chances`;
+        }
+
+        console.log("kisu nai");
+    }
+});
+
+// restart button event listner
+
+restart.addEventListener("click", () => {
+    location.reload();
+});
